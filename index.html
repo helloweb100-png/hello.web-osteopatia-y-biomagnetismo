@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script>
+        /* Marca JS activo y bloquea el scroll mientras carga.
+           Failsafe: si app.js no arranca en 9 s, se desactiva el modo JS para que el contenido sea visible. */
+        document.documentElement.classList.add('js', 'is-loading');
+        setTimeout(function () {
+            if (!window.__abReady) document.documentElement.classList.remove('js', 'is-loading');
+        }, 9000);
+    </script>
+
+    <!-- ═══════ SEO ═══════ -->
+    <title>Osteopatía y Biomagnetismo en Estado de México | Centro Terapéutico A&amp;B</title>
+    <meta name="description" content="Osteopatía y biomagnetismo en Estado de México. Buscamos la causa de tu dolor de espalda, cefaleas y mala postura. Agenda tu valoración o aprende Alphabiotismo.">
+    <meta name="keywords" content="osteopatía, biomagnetismo, osteópata Estado de México, dolor de espalda, dolor de cabeza, problemas posturales, terapia manual, curso Alphabiotismo, curso biomagnetismo Naucalpan, curso biomagnetismo Oaxaca">
+    <meta name="author" content="Centro Terapéutico A&amp;B">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#002a33">
+    <meta name="color-scheme" content="light">
+    <!-- TODO producción: reemplaza https://www.TU-DOMINIO.com por el dominio real -->
+    <link rel="canonical" href="https://www.TU-DOMINIO.com/">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Centro Terapéutico A&amp;B">
+    <meta property="og:title" content="Centro Terapéutico A&amp;B · Osteopatía y Biomagnetismo">
+    <meta property="og:description" content="Tratamos la causa, no solo el dolor. Osteopatía y biomagnetismo para recuperar tu equilibrio y fomentar la autocuración de tu cuerpo.">
+    <meta property="og:url" content="https://www.TU-DOMINIO.com/">
+    <meta property="og:image" content="https://www.TU-DOMINIO.com/img/flyer-ab.jpeg">
+    <meta property="og:image:alt" content="Centro Terapéutico A&amp;B, osteopatía y biomagnetismo">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="preload" as="image" href="img/anatomia.jpeg">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ═══════ DATOS ESTRUCTURADOS ═══════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+          "@id": "https://www.TU-DOMINIO.com/#negocio",
+          "name": "Centro Terapéutico A&B",
+          "alternateName": "Centro Terapéutico A&B · Osteopatía y Biomagnetismo",
+          "description": "Centro de osteopatía y biomagnetismo que busca la causa original del desequilibrio para fomentar la autocuración del cuerpo.",
+          "url": "https://www.TU-DOMINIO.com/",
+          "telephone": "+52-55-4485-1260",
+          "image": "https://www.TU-DOMINIO.com/img/flyer-ab.jpeg",
+          "logo": "https://www.TU-DOMINIO.com/img/logo.jpeg",
+          "address": { "@type": "PostalAddress", "addressRegion": "Estado de México", "addressCountry": "MX" },
+          "areaServed": ["Estado de México", "Ciudad de México"],
+          "knowsAbout": ["Osteopatía", "Biomagnetismo", "Terapia manual", "Dolor de espalda", "Cefaleas", "Problemas posturales"],
+          "sameAs": ["https://www.facebook.com/share/1C4M2Y8u8S/"]
+        },
+        {
+          "@type": "Course",
+          "name": "Alphabiotismo — curso práctico y teórico",
+          "description": "Curso práctico y teórico con prácticas en clínica sin límite de tiempo y constancia avalada por SEP y STPS. Sedes: Naucalpan (Estado de México) y Oaxaca (Centro).",
+          "provider": { "@type": "Organization", "name": "Centro Terapéutico A&B" },
+          "offers": { "@type": "Offer", "price": "11770", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "¿Qué es la osteopatía?", "acceptedAnswer": { "@type": "Answer", "text": "Es una terapia manual que evalúa tu cuerpo como una unidad. Mediante técnicas suaves sobre músculos, articulaciones, fascias y vísceras, busca devolver movilidad y equilibrio para que el cuerpo recupere su capacidad natural de autorregularse." } },
+            { "@type": "Question", "name": "¿Qué es el biomagnetismo?", "acceptedAnswer": { "@type": "Answer", "text": "Es una terapia complementaria que utiliza imanes colocados sobre el cuerpo para identificar y equilibrar desajustes. Es no invasiva y se integra con la osteopatía para buscar la causa original del malestar." } },
+            { "@type": "Question", "name": "¿Qué pasa en mi primera sesión?", "acceptedAnswer": { "@type": "Answer", "text": "Empezamos escuchando tu historia y evaluando tu postura y movilidad. Con esa información identificamos el origen del desequilibrio y aplicamos la terapia más adecuada para ti, explicándote todo antes de comenzar." } },
+            { "@type": "Question", "name": "¿Las terapias duelen?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con técnicas suaves y personalizadas. Puedes sentir algo de tensión al liberar zonas muy cargadas, pero siempre nos ajustamos a tu comodidad." } },
+            { "@type": "Question", "name": "¿Cuántas sesiones necesitaré?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de cada persona: tu historia, el tiempo que llevas con la molestia y tus hábitos. Después de la valoración te orientamos con un plan realista." } },
+            { "@type": "Question", "name": "¿Sustituye a mi tratamiento médico?", "acceptedAnswer": { "@type": "Answer", "text": "No. Son terapias complementarias que no reemplazan el diagnóstico, el tratamiento ni las indicaciones de tu médico. Si tienes una condición diagnosticada, platícanos para trabajar de forma responsable." } },
+            { "@type": "Question", "name": "¿Qué es Alphabiotismo y cuánto cuesta el curso?", "acceptedAnswer": { "@type": "Answer", "text": "Es nuestro curso práctico y teórico. Incluye prácticas en clínica sin límite de tiempo y constancia avalada por SEP y STPS. Se imparte en Naucalpan y Oaxaca (Centro) con una inversión de $11,770 MXN." } },
+            { "@type": "Question", "name": "¿Cómo agendo mi cita?", "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp al 55 4485 1260 o llena el formulario de contacto. Te respondemos para coordinar tu valoración." } }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- Sprite de iconos (reutilizable con <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+        <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+        <symbol id="i-spine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 4h8M7 8h10M8 12h8M7 16h10M9 20h6"/><path d="M12 2v20" stroke-width="1" opacity=".5"/></g></symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" d="M13 3L6 13.5h5.2L10 21l7.5-10.8h-5.3z"/></symbol>
+        <symbol id="i-posture" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M12 7.5V14m0 0l-3 7m3-7l3 7M7 10.5l5-1.5 5 1.5"/></g></symbol>
+        <symbol id="i-lungs" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9M9 6v5c0 4.200-1 7.500-4 7.500-1.600 0-2-1-2-2.200C3 13 5.500 8 9 6zM15 6v5c0 4.200 1 7.500 4 7.500 1.600 0 2-1 2-2.200C21 13 18.500 8 15 6z"/></g></symbol>
+        <symbol id="i-gut" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M6 6h10.500a3.500 3.500 0 0 1 0 7H8a3.500 3.500 0 0 0 0 7h10"/></symbol>
+        <symbol id="i-hand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8 13V6.500a1.500 1.500 0 0 1 3 0V11M11 11V4.500a1.500 1.500 0 0 1 3 0V11M14 11V6.500a1.500 1.500 0 0 1 3 0V14a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.700L3 14a1.500 1.500 0 0 1 2.500-1.600L8 15"/></symbol>
+        <symbol id="i-magnet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a6 6 0 0 0 12 0V3h-4v8a2 2 0 0 1-4 0V3z"/><path d="M6 7h4M14 7h4"/></g></symbol>
+        <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="4.500"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></g></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></g></symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.200"/><path d="M3 20a6 6 0 0 1 12 0M16 5a3.200 3.200 0 0 1 0 6M17 14.500a6 6 0 0 1 4 5.500"/></g></symbol>
+        <symbol id="i-infinity" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 12c-2-2.600-3.600-4-5.500-4a4 4 0 0 0 0 8c1.900 0 3.500-1.400 5.500-4zm0 0c2 2.600 3.600 4 5.500 4a4 4 0 0 0 0-8c-1.900 0-3.500 1.400-5.500 4z"/></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3H20v15H6.500A2.500 2.500 0 0 0 4 20.500z"/><path d="M4 20.500A2.500 2.500 0 0 0 6.500 23H20v-5M9 8h7M9 12h5"/></g></symbol>
+        <symbol id="i-badge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.500 14.500L7 21.500l5-3 5 3-1.500-7M9.500 9l1.700 1.700 3.300-3.400"/></g></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+    </defs>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ═══════ SPINNER DE CARGA ═══════ -->
+<div id="loader" role="status" aria-live="polite" aria-label="Cargando Centro Terapéutico A&amp;B">
+    <div class="ld-panel ld-panel--top"></div>
+    <div class="ld-panel ld-panel--bottom"></div>
+    <div class="ld-grid" aria-hidden="true"></div>
+    <div class="ld-core">
+        <div class="ld-orbit">
+            <svg class="ld-svg" viewBox="0 0 200 200" aria-hidden="true">
+                <circle class="ld-track" cx="100" cy="100" r="94"/>
+                <circle class="ld-progress" id="ld-progress" cx="100" cy="100" r="94" pathLength="100"/>
+                <circle class="ld-ring ld-ring--a" cx="100" cy="100" r="82"/>
+                <circle class="ld-ring ld-ring--b" cx="100" cy="100" r="70"/>
+                <g class="ld-sat ld-sat--1"><circle cx="100" cy="6" r="4"/></g>
+                <g class="ld-sat ld-sat--2"><circle cx="100" cy="30" r="2.600"/></g>
+                <g class="ld-sat ld-sat--3"><circle cx="100" cy="18" r="3.200"/></g>
+            </svg>
+            <img class="ld-logo" src="img/emblem-light.png" alt="" width="272" height="234">
+        </div>
+        <p class="ld-brand">Centro Terapéutico <span>A&amp;B</span></p>
+        <p class="ld-pct"><span id="ld-num">0</span><small>%</small></p>
+        <p class="ld-msg" id="ld-msg">Calibrando campo magnético</p>
+    </div>
+    <div class="ld-bar" aria-hidden="true"><i id="ld-bar"></i></div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><i id="scroll-progress"></i></div>
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<header id="navbar" class="nav">
+    <div class="container nav__wrap">
+        <a href="#inicio" class="brand" aria-label="Centro Terapéutico A&amp;B — Inicio">
+            <img src="img/emblem-light.png" alt="" class="brand__mark" width="46" height="40">
+            <span class="brand__text">
+                <strong>Centro Terapéutico <em>A&amp;B</em></strong>
+                <small>Osteopatía y Biomagnetismo</small>
+            </span>
+        </a>
+        <nav class="nav__links" aria-label="Navegación principal">
+            <a href="#tratamos">Qué tratamos</a>
+            <a href="#terapias">Terapias</a>
+            <a href="#metodo">Método</a>
+            <a href="#formacion">Formación</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <a href="https://wa.me/525544851260" data-wa="Hola, quiero agendar mi valoración en el Centro Terapéutico A&B." target="_blank" rel="noopener" class="btn btn--sm btn--accent nav__cta">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Quiero mi cita</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ═══════ MENÚ MÓVIL ═══════ -->
+<div id="menu" class="menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <div class="menu__bg" aria-hidden="true"></div>
+    <nav class="menu__nav" aria-label="Menú móvil">
+        <a href="#tratamos" class="menu__link"><span>01</span>Qué tratamos</a>
+        <a href="#terapias" class="menu__link"><span>02</span>Terapias</a>
+        <a href="#metodo" class="menu__link"><span>03</span>Método</a>
+        <a href="#formacion" class="menu__link"><span>04</span>Formación</a>
+        <a href="#preguntas" class="menu__link"><span>05</span>Preguntas</a>
+        <a href="#contacto" class="menu__link"><span>06</span>Contacto</a>
+    </nav>
+    <div class="menu__foot">
+        <a href="https://wa.me/525544851260" data-wa="Hola, quiero agendar mi valoración en el Centro Terapéutico A&B." target="_blank" rel="noopener" class="btn btn--accent btn--block">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Clic aquí y agenda tu valoración</span>
+        </a>
+        <p class="menu__tel">o llámanos al <a href="tel:+525544851260">55 4485 1260</a></p>
+    </div>
+</div>
+
+<main id="contenido">
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+    <canvas id="field" class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+        <div class="hero__copy">
+            <p class="eyebrow hero-in" style="--h:0">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                Osteopatía &amp; Biomagnetismo<span class="eyebrow__loc"> · Estado de México</span>
+            </p>
+
+            <h1 id="hero-title" class="hero__title" data-split data-split-hero>Tratamos la <em>causa</em>, no solo el&nbsp;dolor.</h1>
+
+            <p class="hero__rot hero-in" style="--h:5">
+                Terapia para
+                <span class="rotator" id="rotator" aria-live="off">
+                    <span class="rotator__track">
+                        <span>dolor de espalda</span>
+                        <span>dolores de cabeza</span>
+                        <span>problemas posturales</span>
+                        <span>tensión cervical</span>
+                        <span>malestar digestivo</span>
+                        <span>molestias respiratorias</span>
+                    </span>
+                </span>
+            </p>
+
+            <p class="hero__lead hero-in" style="--h:6">
+                Combinamos <strong>osteopatía</strong> y <strong>biomagnetismo</strong> para encontrar el origen real de tu desequilibrio y fomentar la autocuración de tu cuerpo.
+            </p>
+
+            <div class="hero__cta hero-in" style="--h:7">
+                <a href="https://wa.me/525544851260" data-wa="Hola, quiero mi valoración. Me gustaría saber cómo pueden ayudarme." target="_blank" rel="noopener" class="btn btn--accent btn--lg magnetic">
+                    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Quiero mi valoración</span>
+                    <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+                <a href="#metodo" class="btn btn--ghost btn--lg magnetic">
+                    <span>Descubrir cómo trabajamos</span>
+                </a>
+            </div>
+
+            <ul class="hero__trust hero-in" style="--h:8" aria-label="Por qué confiar">
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Terapia manual personalizada</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Valoración integral</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Formación avalada SEP · STPS</li>
+            </ul>
+        </div>
+
+        <!-- Orbe visual -->
+        <div class="hero__visual hero-in" style="--h:4">
+            <div class="orb" id="orb" data-parallax="0.06">
+                <svg class="orb__field" viewBox="-300 -300 600 600" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="fl-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#f99d3f"/><stop offset="1" stop-color="#7fd0dc"/>
+                        </linearGradient>
+                    </defs>
+                    <g fill="none" stroke="url(#fl-grad)" stroke-linecap="round">
+                        <path class="fl fl--1" id="fl-r1" d="M0 -250C200 -250 200 250 0 250"/>
+                        <path class="fl fl--1" id="fl-l1" d="M0 -250C-200 -250 -200 250 0 250"/>
+                        <path class="fl fl--2" id="fl-r2" d="M0 -250C290 -250 290 250 0 250"/>
+                        <path class="fl fl--2" id="fl-l2" d="M0 -250C-290 -250 -290 250 0 250"/>
+                        <path class="fl fl--3" id="fl-r3" d="M0 -250C380 -250 380 250 0 250"/>
+                        <path class="fl fl--3" id="fl-l3" d="M0 -250C-380 -250 -380 250 0 250"/>
+                    </g>
+                    <g fill="#ffc383">
+                        <circle r="3.500"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#fl-r2"/></animateMotion></circle>
+                        <circle r="3"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#fl-l3"/></animateMotion></circle>
+                        <circle r="2.500" fill="#7fd0dc"><animateMotion dur="6s" begin="-2s" repeatCount="indefinite"><mpath href="#fl-l1"/></animateMotion></circle>
+                        <circle r="2.500" fill="#7fd0dc"><animateMotion dur="8s" begin="-5s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#fl-r3"/></animateMotion></circle>
+                    </g>
+                </svg>
+
+                <svg class="orb__dial" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                    <circle class="dial dial--solid" cx="200" cy="200" r="195"/>
+                    <g class="dial-spin dial-spin--slow"><circle class="dial dial--ticks" cx="200" cy="200" r="186"/></g>
+                    <g class="dial-spin dial-spin--rev"><circle class="dial dial--dash" cx="200" cy="200" r="176"/></g>
+                    <g class="dial-spin dial-spin--fast"><circle class="dial-node" cx="200" cy="5" r="5"/><circle class="dial-node-halo" cx="200" cy="5" r="11"/></g>
+                    <g class="dial-spin dial-spin--mid"><circle class="dial-node dial-node--teal" cx="200" cy="395" r="3.500"/></g>
+                </svg>
+
+                <div class="orb__disc"></div>
+
+                <figure class="orb__figure">
+                    <img src="img/anatomia.jpeg" width="959" height="1280" alt="Ilustración anatómica de la espalda: esqueleto a la izquierda y musculatura a la derecha" fetchpriority="high">
+                </figure>
+                <div class="orb__scanwrap" aria-hidden="true"><span class="orb__scan"></span></div>
+
+                <div class="orb__hotspots" aria-hidden="true">
+                    <span class="hs hs--left"  style="left:49%;top:12.5%"><i></i><b>CRÁNEO<small>Cefaleas</small></b></span>
+                    <span class="hs hs--right" style="left:53%;top:26%"><i></i><b>C1–C7<small>Cervical</small></b></span>
+                    <span class="hs hs--left"  style="left:42%;top:46%"><i></i><b>T1–T12<small>Dorsal</small></b></span>
+                    <span class="hs hs--right" style="left:50%;top:69%"><i></i><b>L1–L5<small>Lumbar</small></b></span>
+                </div>
+
+                <div class="orb__meter" aria-hidden="true">
+                    <span class="orb__meter-label">Equilibrio corporal</span>
+                    <span class="orb__meter-val"><span id="meter-val">62</span>%</span>
+                    <span class="orb__meter-bar"><i id="meter-bar"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#tratamos" class="scroll-hint hero-in" style="--h:9" aria-label="Seguir bajando">
+        <span class="scroll-hint__mouse"><i></i></span>
+        <span class="scroll-hint__txt">Desliza</span>
+    </a>
+</section>
+
+<!-- ═══════ MARQUEE ═══════ -->
+<div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee">
+        <div class="marquee__track">
+            <span>Osteopatía</span><span>Biomagnetismo</span><span>Causa original</span><span>Autocuración</span><span>Terapia manual</span><span>Equilibrio</span><span>Alphabiotismo</span>
+            <span>Osteopatía</span><span>Biomagnetismo</span><span>Causa original</span><span>Autocuración</span><span>Terapia manual</span><span>Equilibrio</span><span>Alphabiotismo</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     QUÉ TRATAMOS — mapa corporal interactivo
+════════════════════════════════════════════════ -->
+<section id="tratamos" class="section section--ivory" aria-labelledby="tratamos-title">
+    <div class="blueprint" aria-hidden="true"></div>
+    <div class="container">
+        <header class="head" >
+            <p class="kicker" data-reveal="up"><span>01</span> Qué tratamos</p>
+            <h2 id="tratamos-title" class="title" data-split>Tu cuerpo habla. <em>Aprende a escucharlo.</em></h2>
+            <p class="lead" data-reveal="up" style="--d:.15s">Cinco señales frecuentes de que algo en tu cuerpo pide equilibrio. Toca cada zona y descubre cómo la abordamos.</p>
+        </header>
+
+        <div class="bodymap">
+            <div class="bodymap__figure" data-reveal="zoom">
+                <div class="bodymap__ring bodymap__ring--1" aria-hidden="true"></div>
+                <div class="bodymap__ring bodymap__ring--2" aria-hidden="true"></div>
+                <div class="bodymap__box">
+                    <img src="img/anatomia.jpeg" width="959" height="1280" loading="lazy" alt="Mapa anatómico de espalda con las zonas que valoramos: cráneo, cervical, dorsal, lumbar y pelvis">
+                    <button class="pin is-active" data-pin="1" style="left:49%;top:12.5%" aria-label="Dolores de cabeza"><span>1</span></button>
+                    <button class="pin" data-pin="2" style="left:53%;top:25.5%" aria-label="Problemas posturales"><span>2</span></button>
+                    <button class="pin" data-pin="3" style="left:41%;top:46%" aria-label="Disfunciones respiratorias"><span>3</span></button>
+                    <button class="pin" data-pin="4" style="left:49%;top:68%" aria-label="Problemas musculoesqueléticos"><span>4</span></button>
+                    <button class="pin" data-pin="5" style="left:50%;top:84%" aria-label="Disfunciones digestivas"><span>5</span></button>
+                </div>
+            </div>
+
+            <ul class="conds" id="conds">
+                <li class="cond is-active" data-cond="1" data-reveal="up" style="--d:.05s">
+                    <button class="cond__btn" aria-expanded="true" aria-controls="cond-body-1" id="cond-btn-1">
+                        <span class="cond__icon"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+                        <span class="cond__name">Dolores de cabeza</span>
+                        <span class="cond__plus"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span>
+                    </button>
+                    <div class="cond__body" id="cond-body-1" role="region" aria-labelledby="cond-btn-1">
+                        <div class="cond__inner">
+                            <p>Cefaleas y migrañas suelen nacer en el cuello, la mandíbula o la base del cráneo. Valoramos la tensión cervical y craneal para descubrir de dónde viene realmente tu dolor.</p>
+                            <ul class="tags"><li>Cefalea tensional</li><li>Tensión cervical</li><li>Mandíbula</li></ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cond" data-cond="2" data-reveal="up" style="--d:.12s">
+                    <button class="cond__btn" aria-expanded="false" aria-controls="cond-body-2" id="cond-btn-2">
+                        <span class="cond__icon"><svg class="ico" aria-hidden="true"><use href="#i-posture"/></svg></span>
+                        <span class="cond__name">Problemas posturales</span>
+                        <span class="cond__plus"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span>
+                    </button>
+                    <div class="cond__body" id="cond-body-2" role="region" aria-labelledby="cond-btn-2">
+                        <div class="cond__inner">
+                            <p>Cabeza adelantada, hombros caídos, espalda cargada tras horas de escritorio o celular. Analizamos cómo se compensa tu cuerpo y te ayudamos a reeducarlo.</p>
+                            <ul class="tags"><li>Cuello y hombros</li><li>Cabeza adelantada</li><li>Hábitos</li></ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cond" data-cond="3" data-reveal="up" style="--d:.19s">
+                    <button class="cond__btn" aria-expanded="false" aria-controls="cond-body-3" id="cond-btn-3">
+                        <span class="cond__icon"><svg class="ico" aria-hidden="true"><use href="#i-lungs"/></svg></span>
+                        <span class="cond__name">Disfunciones respiratorias</span>
+                        <span class="cond__plus"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span>
+                    </button>
+                    <div class="cond__body" id="cond-body-3" role="region" aria-labelledby="cond-btn-3">
+                        <div class="cond__inner">
+                            <p>Pecho apretado, respiración corta o costillas rígidas. Evaluamos la movilidad de costillas y diafragma para devolverle espacio a tu respiración.</p>
+                            <ul class="tags"><li>Costillas</li><li>Diafragma</li><li>Columna dorsal</li></ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cond" data-cond="4" data-reveal="up" style="--d:.26s">
+                    <button class="cond__btn" aria-expanded="false" aria-controls="cond-body-4" id="cond-btn-4">
+                        <span class="cond__icon"><svg class="ico" aria-hidden="true"><use href="#i-spine"/></svg></span>
+                        <span class="cond__name">Problemas musculoesqueléticos</span>
+                        <span class="cond__plus"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span>
+                    </button>
+                    <div class="cond__body" id="cond-body-4" role="region" aria-labelledby="cond-btn-4">
+                        <div class="cond__inner">
+                            <p>Dolor lumbar, rigidez, contracturas y molestias articulares que limitan tu día a día. Liberamos tensión y recuperamos movilidad atendiendo la causa, no solo el síntoma.</p>
+                            <ul class="tags"><li>Zona lumbar</li><li>Articulaciones</li><li>Contracturas</li></ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cond" data-cond="5" data-reveal="up" style="--d:.33s">
+                    <button class="cond__btn" aria-expanded="false" aria-controls="cond-body-5" id="cond-btn-5">
+                        <span class="cond__icon"><svg class="ico" aria-hidden="true"><use href="#i-gut"/></svg></span>
+                        <span class="cond__name">Disfunciones digestivas</span>
+                        <span class="cond__plus"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span>
+                    </button>
+                    <div class="cond__body" id="cond-body-5" role="region" aria-labelledby="cond-btn-5">
+                        <div class="cond__inner">
+                            <p>Pesadez, inflamación o malestar abdominal pueden relacionarse con tensiones en columna y vísceras. Valoramos tu cuerpo de forma integral para encontrar el origen.</p>
+                            <ul class="tags"><li>Abdomen</li><li>Vísceras</li><li>Pelvis</li></ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <aside class="cta-strip" data-reveal="up">
+            <div class="cta-strip__txt">
+                <h3>¿Te identificaste con alguna señal?</h3>
+                <p>No tienes que seguir conviviendo con la molestia. Cuéntanos tu caso y te orientamos sin compromiso.</p>
+            </div>
+            <a href="https://wa.me/525544851260" data-wa="Hola, estoy listo para sentirme mejor. ¿Me ayudan a agendar mi primera sesión?" target="_blank" rel="noopener" class="btn btn--primary btn--lg magnetic">
+                <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Estoy listo para sentirme mejor</span>
+            </a>
+        </aside>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TERAPIAS
+════════════════════════════════════════════════ -->
+<section id="terapias" class="section section--dark" aria-labelledby="terapias-title">
+    <div class="dark-glow dark-glow--a" aria-hidden="true"></div>
+    <div class="dark-glow dark-glow--b" aria-hidden="true"></div>
+    <div class="container">
+        <header class="head head--center">
+            <p class="kicker kicker--light" data-reveal="up"><span>02</span> Nuestras terapias</p>
+            <h2 id="terapias-title" class="title title--light" data-split>Dos terapias. <em>Una sola mirada</em> sobre ti.</h2>
+            <p class="lead lead--light" data-reveal="up" style="--d:.15s">No tratamos síntomas aislados. Integramos osteopatía y biomagnetismo para atender el origen del desequilibrio y acompañar la capacidad natural de tu cuerpo para sanar.</p>
+        </header>
+
+        <div class="therapies">
+            <article class="card-t spot tilt" data-reveal="up">
+                <span class="card-t__num" aria-hidden="true">01</span>
+                <div class="card-t__art" aria-hidden="true">
+                    <svg viewBox="0 0 120 120" class="art-spine">
+                        <g fill="none" stroke="currentColor" stroke-width="2">
+                            <rect class="v v1" x="40" y="8"  width="40" height="12" rx="6"/>
+                            <rect class="v v2" x="36" y="26" width="48" height="12" rx="6"/>
+                            <rect class="v v3" x="34" y="44" width="52" height="12" rx="6"/>
+                            <rect class="v v4" x="34" y="62" width="52" height="12" rx="6"/>
+                            <rect class="v v5" x="36" y="80" width="48" height="12" rx="6"/>
+                            <rect class="v v6" x="40" y="98" width="40" height="12" rx="6"/>
+                        </g>
+                        <path d="M60 4v112" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" opacity=".5"/>
+                    </svg>
+                </div>
+                <h3>Osteopatía</h3>
+                <p class="card-t__lead">Terapia manual que entiende tu cuerpo como una unidad. Con técnicas suaves y precisas, evaluamos articulaciones, músculos, fascias y vísceras para devolver movilidad y liberar las tensiones que alteran tu equilibrio.</p>
+                <ul class="checks">
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Evaluación postural y estructural completa</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Técnicas manuales suaves y personalizadas</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Enfoque en columna, cráneo, articulaciones y vísceras</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Plan de acompañamiento según tu caso</li>
+                </ul>
+                <a href="https://wa.me/525544851260" data-wa="Hola, quiero saber si la osteopatía es para mí." target="_blank" rel="noopener" class="link-cta">
+                    Quiero saber si es para mí
+                    <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+
+            <article class="card-t card-t--b spot tilt" data-reveal="up" style="--d:.15s">
+                <span class="card-t__num" aria-hidden="true">02</span>
+                <div class="card-t__art" aria-hidden="true">
+                    <svg viewBox="0 0 120 120" class="art-magnet">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M30 20v40a30 30 0 0 0 60 0V20H72v40a12 12 0 0 1-24 0V20z"/>
+                            <path d="M30 36h18M72 36h18" opacity=".7"/>
+                            <path class="mf mf1" d="M20 20C4 40 4 80 22 100" stroke-dasharray="3 5"/>
+                            <path class="mf mf2" d="M100 20c16 20 16 60-2 80" stroke-dasharray="3 5"/>
+                            <path class="mf mf3" d="M10 12C-8 44-8 88 16 112" stroke-dasharray="3 5" opacity=".6"/>
+                            <path class="mf mf4" d="M110 12c18 32 18 76-6 100" stroke-dasharray="3 5" opacity=".6"/>
+                        </g>
+                    </svg>
+                </div>
+                <h3>Biomagnetismo</h3>
+                <p class="card-t__lead">Terapia complementaria que utiliza imanes de forma localizada para identificar y equilibrar desajustes del organismo, apoyando la búsqueda de la causa original del malestar y la autocuración del cuerpo.</p>
+                <ul class="checks">
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Rastreo corporal para ubicar puntos de desequilibrio</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Aplicación de imanes no invasiva</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Complemento ideal de la terapia manual</li>
+                    <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Sesiones cómodas, sin agujas ni medicamentos</li>
+                </ul>
+                <a href="https://wa.me/525544851260" data-wa="Hola, quiero saber si el biomagnetismo es para mí." target="_blank" rel="noopener" class="link-cta">
+                    Quiero saber si es para mí
+                    <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     MÉTODO — línea de tiempo con scroll
+════════════════════════════════════════════════ -->
+<section id="metodo" class="section section--paper" aria-labelledby="metodo-title">
+    <div class="container">
+        <header class="head head--center">
+            <p class="kicker" data-reveal="up"><span>03</span> Nuestro método</p>
+            <h2 id="metodo-title" class="title" data-split>De tu síntoma a la <em>causa original</em></h2>
+            <p class="lead" data-reveal="up" style="--d:.15s">Un proceso claro, humano y sin prisas. Así acompañamos cada caso desde la primera conversación.</p>
+        </header>
+
+        <div class="timeline" id="timeline">
+        <ol class="timeline__list">
+            <li class="tl-step" data-reveal="up">
+                <span class="tl-step__dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                    <span class="tl-card__num">01</span>
+                    <h3>Escuchamos tu historia</h3>
+                    <p>Conversamos sobre tu dolor, tus hábitos y tus antecedentes. Entender tu historia es el primer paso para encontrar el origen.</p>
+                </div>
+            </li>
+            <li class="tl-step" data-reveal="up">
+                <span class="tl-step__dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                    <span class="tl-card__num">02</span>
+                    <h3>Evaluamos tu cuerpo completo</h3>
+                    <p>Valoración postural y palpación para ver cómo se compensa tu cuerpo, más allá de la zona donde duele.</p>
+                </div>
+            </li>
+            <li class="tl-step" data-reveal="up">
+                <span class="tl-step__dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                    <span class="tl-card__num">03</span>
+                    <h3>Identificamos la causa original</h3>
+                    <p>Conectamos los hallazgos de estructura, vísceras y tensiones para señalar el desequilibrio de fondo.</p>
+                </div>
+            </li>
+            <li class="tl-step" data-reveal="up">
+                <span class="tl-step__dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                    <span class="tl-card__num">04</span>
+                    <h3>Aplicamos terapia dirigida</h3>
+                    <p>Osteopatía y biomagnetismo según lo que necesite tu cuerpo. Cada sesión se diseña pensando en ti.</p>
+                </div>
+            </li>
+            <li class="tl-step" data-reveal="up">
+                <span class="tl-step__dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                    <span class="tl-card__num">05</span>
+                    <h3>Te acompañamos en tu autocuración</h3>
+                    <p>Te damos recomendaciones de hábitos y seguimiento para sostener el equilibrio que recuperaste.</p>
+                </div>
+            </li>
+        </ol>
+            <span class="timeline__line" aria-hidden="true"><i id="timeline-fill"></i></span>
+        </div>
+
+        <div class="cta-center" data-reveal="up">
+            <a href="https://wa.me/525544851260" data-wa="Hola, quiero que revisen mi caso. ¿Cómo empezamos?" target="_blank" rel="noopener" class="btn btn--primary btn--lg magnetic">
+                <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Quiero que revisen mi caso</span>
+                <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <p class="cta-center__note">Respuesta por WhatsApp · Sin compromiso</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VIDEOS
+════════════════════════════════════════════════ -->
+<section id="sesiones" class="section section--ink" aria-labelledby="sesiones-title">
+    <div class="dark-glow dark-glow--c" aria-hidden="true"></div>
+    <div class="container">
+        <header class="head head--center">
+            <p class="kicker kicker--light" data-reveal="up"><span>04</span> Terapia en acción</p>
+            <h2 id="sesiones-title" class="title title--light" data-split>Manos expertas. <em>Técnica real.</em></h2>
+            <p class="lead lead--light" data-reveal="up" style="--d:.15s">Así se ve nuestro trabajo en sesión y en formación. Toca para reproducir.</p>
+        </header>
+
+        <div class="videos">
+            <figure class="vid vid--wide tilt" data-reveal="clip">
+                <video preload="none" playsinline controlslist="nodownload" poster="img/poster-sesion.jpg" width="848" height="478" aria-label="Video: técnica cervical aplicada en camilla">
+                    <source src="img/sesion-cervical.mp4" type="video/mp4">
+                </video>
+                <button class="vid__play" aria-label="Reproducir video: técnica cervical en camilla">
+                    <span class="vid__ring" aria-hidden="true"></span>
+                    <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>
+                </button>
+                <figcaption><span class="chip">Técnica cervical</span>Sesión en camilla</figcaption>
+            </figure>
+
+            <figure class="vid vid--tall tilt" data-reveal="clip" style="--d:.15s">
+                <video preload="none" playsinline controlslist="nodownload" poster="img/poster-tecnica.jpg" width="478" height="850" aria-label="Video: valoración y liberación cervical con paciente sentado">
+                    <source src="img/tecnica-cervical.mp4" type="video/mp4">
+                </video>
+                <button class="vid__play" aria-label="Reproducir video: valoración cervical con paciente sentado">
+                    <span class="vid__ring" aria-hidden="true"></span>
+                    <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>
+                </button>
+                <figcaption><span class="chip">Valoración cervical</span>Paciente sentado</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FORMACIÓN — ALPHABIOTISMO
+════════════════════════════════════════════════ -->
+<section id="formacion" class="section section--course" aria-labelledby="formacion-title">
+    <div class="dark-glow dark-glow--d" aria-hidden="true"></div>
+    <div class="course-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+        <div class="course-top">
+            <header class="head course-top__head">
+                <p class="kicker kicker--light" data-reveal="up"><span>05</span> Formación profesional</p>
+                <h2 id="formacion-title" class="title title--light" data-split>Aprende <em>Alphabiotismo</em> con práctica real en clínica.</h2>
+                <p class="lead lead--light" data-reveal="up" style="--d:.15s">Un curso práctico y teórico para que domines la técnica y salgas con confianza para aplicarla. Estudia, practica y certifícate con respaldo oficial.</p>
+            </header>
+
+            <div class="seal" data-reveal="zoom" aria-label="Constancia avalada por SEP y STPS">
+                <svg viewBox="0 0 200 200" class="seal__ring" aria-hidden="true">
+                    <defs><path id="seal-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+                    <text><textPath href="#seal-path" startOffset="0" textLength="482" lengthAdjust="spacing">CONSTANCIA AVALADA POR SEP Y STPS ·</textPath></text>
+                </svg>
+                <div class="seal__core">
+                    <svg class="ico" aria-hidden="true"><use href="#i-badge"/></svg>
+                    <strong>SEP<i>·</i>STPS</strong>
+                </div>
+            </div>
+        </div>
+
+        <ul class="perks">
+            <li data-reveal="up">
+                <span class="perk__ico"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span>
+                <h3>Curso práctico y teórico</h3>
+                <p>Aprende los fundamentos y aplícalos desde el primer día con acompañamiento directo.</p>
+            </li>
+            <li data-reveal="up" style="--d:.1s">
+                <span class="perk__ico"><svg class="ico" aria-hidden="true"><use href="#i-infinity"/></svg></span>
+                <h3>Prácticas en clínica sin límite de tiempo</h3>
+                <p>Sigue practicando con pacientes reales hasta sentirte seguro. Aquí no hay prisa.</p>
+            </li>
+            <li data-reveal="up" style="--d:.2s">
+                <span class="perk__ico"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <h3>Constancia avalada por SEP y STPS</h3>
+                <p>Respalda tu formación con una constancia que te abre puertas profesionales.</p>
+            </li>
+        </ul>
+
+        <div class="sedes">
+            <article class="ticket spot tilt" data-reveal="up">
+                <div class="ticket__main">
+                    <p class="ticket__label"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Sede</p>
+                    <h3>Naucalpan</h3>
+                    <p class="ticket__sub">Estado de México</p>
+                    <ul class="ticket__list">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Curso práctico y teórico</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Prácticas en clínica sin límite de tiempo</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Constancia avalada por SEP y STPS</li>
+                    </ul>
+                </div>
+                <div class="ticket__side">
+                    <p class="ticket__price"><small>Inversión</small><strong>$11,770</strong><span>MXN</span></p>
+                    <a href="https://wa.me/525544851260" data-wa="Hola, quiero aprender Alphabiotismo. Me interesa la sede de Naucalpan. ¿Me comparten fechas y temario?" target="_blank" rel="noopener" class="btn btn--accent magnetic">
+                        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                        <span>Quiero mi lugar en Naucalpan</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="ticket spot tilt" data-reveal="up" style="--d:.15s">
+                <div class="ticket__main">
+                    <p class="ticket__label"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Sede</p>
+                    <h3>Oaxaca</h3>
+                    <p class="ticket__sub">Centro</p>
+                    <ul class="ticket__list">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Curso práctico y teórico</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Prácticas en clínica sin límite de tiempo</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Constancia avalada por SEP y STPS</li>
+                    </ul>
+                </div>
+                <div class="ticket__side">
+                    <p class="ticket__price"><small>Inversión</small><strong>$11,770</strong><span>MXN</span></p>
+                    <a href="https://wa.me/525544851260" data-wa="Hola, quiero aprender Alphabiotismo. Me interesa la sede de Oaxaca Centro. ¿Me comparten fechas y temario?" target="_blank" rel="noopener" class="btn btn--accent magnetic">
+                        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                        <span>Quiero mi lugar en Oaxaca</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+        <p class="course-note" data-reveal="up">¿Dudas sobre fechas, temario o requisitos? Escríbenos y te compartimos toda la información.</p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     POR QUÉ A&B — bento
+════════════════════════════════════════════════ -->
+<section id="por-que" class="section section--ivory" aria-labelledby="porque-title">
+    <div class="blueprint" aria-hidden="true"></div>
+    <div class="container">
+        <header class="head">
+            <p class="kicker" data-reveal="up"><span>06</span> Por qué A&amp;B</p>
+            <h2 id="porque-title" class="title" data-split>La diferencia está en <em>cómo miramos</em>.</h2>
+        </header>
+
+        <div class="bento">
+            <article class="tile tile--hero spot" data-reveal="up">
+                <div class="tile__pulse" aria-hidden="true"><i></i><i></i><i></i></div>
+                <span class="tile__ico"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span>
+                <h3>Buscamos la causa original</h3>
+                <p>Un dolor casi nunca nace donde lo sientes. Rastreamos el desequilibrio de fondo para que el alivio sea más profundo y duradero.</p>
+            </article>
+            <article class="tile spot" data-reveal="up" style="--d:.08s">
+                <span class="tile__ico"><svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg></span>
+                <h3>Terapia manual personalizada</h3>
+                <p>Cada cuerpo es distinto. Adaptamos técnica, ritmo e intensidad a ti.</p>
+            </article>
+            <article class="tile spot" data-reveal="up" style="--d:.16s">
+                <span class="tile__ico"><svg class="ico" aria-hidden="true"><use href="#i-magnet"/></svg></span>
+                <h3>Dos terapias que se complementan</h3>
+                <p>Osteopatía y biomagnetismo trabajando juntas en un mismo plan.</p>
+            </article>
+            <article class="tile spot" data-reveal="up" style="--d:.24s">
+                <span class="tile__ico"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                <h3>Trato cercano y humano</h3>
+                <p>Te escuchamos, te explicamos y resolvemos tus dudas por WhatsApp.</p>
+            </article>
+            <article class="tile tile--wide spot" data-reveal="up" style="--d:.32s">
+                <span class="tile__ico"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+                <h3>Una comunidad que nos sigue</h3>
+                <p>Más de 1,300 personas siguen nuestro trabajo en Facebook. Conócenos, mira nuestras publicaciones y súmate.</p>
+                <a href="https://www.facebook.com/share/1C4M2Y8u8S/" target="_blank" rel="noopener" class="link-cta link-cta--dark">
+                    <svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg>
+                    Clic aquí y visita nuestra página
+                    <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ESTADÍSTICAS
+════════════════════════════════════════════════ -->
+<section class="stats" aria-label="Cifras del centro">
+    <div class="stats__bg" aria-hidden="true"></div>
+    <div class="container stats__grid">
+        <div class="stat" data-reveal="up"><p class="stat__val"><b class="count" data-to="5">0</b></p><p class="stat__lbl">Áreas de atención</p></div>
+        <div class="stat" data-reveal="up" style="--d:.08s"><p class="stat__val"><b class="count" data-to="2">0</b></p><p class="stat__lbl">Terapias que se complementan</p></div>
+        <div class="stat" data-reveal="up" style="--d:.16s"><p class="stat__val"><b class="count" data-to="2">0</b></p><p class="stat__lbl">Sedes de formación</p></div>
+        <div class="stat" data-reveal="up" style="--d:.24s"><p class="stat__val">+<b class="count" data-to="1300" data-sep="1">0</b></p><p class="stat__lbl">Seguidores en Facebook</p></div>
+    </div>
+</section>
+
+<!-- ═══════ TEXTO GIGANTE ═══════ -->
+<div class="giant" aria-hidden="true">
+    <div class="giant__track" id="giant-track">
+        <span>Equilibrio</span><i></i><span>Autocuración</span><i></i><span>Bienestar</span><i></i><span>Equilibrio</span><i></i><span>Autocuración</span>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════ -->
+<section id="preguntas" class="section section--paper" aria-labelledby="faq-title">
+    <div class="container faq">
+        <header class="head faq__head">
+            <p class="kicker" data-reveal="up"><span>07</span> Preguntas frecuentes</p>
+            <h2 id="faq-title" class="title" data-split>Resolvemos tus <em>dudas</em> antes de empezar.</h2>
+            <p class="lead" data-reveal="up" style="--d:.15s">Si no encuentras tu respuesta, escríbenos. Con gusto platicamos contigo.</p>
+            <div class="faq__cta" data-reveal="up" style="--d:.25s">
+                <a href="https://wa.me/525544851260" data-wa="Hola, tengo una duda y me gustaría resolverla con ustedes." target="_blank" rel="noopener" class="btn btn--primary magnetic">
+                    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Aún tengo una duda, ¡pregúntales!</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="faq__list" id="faq-list">
+            <div class="qa is-open" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="true" aria-controls="qa-1" id="qa-q-1"><span>¿Qué es la osteopatía?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-1" role="region" aria-labelledby="qa-q-1"><div><p>Es una terapia manual que evalúa tu cuerpo como una unidad. Mediante técnicas suaves sobre músculos, articulaciones, fascias y vísceras, busca devolver movilidad y equilibrio para que el cuerpo recupere su capacidad natural de autorregularse.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-2" id="qa-q-2"><span>¿Qué es el biomagnetismo?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-2" role="region" aria-labelledby="qa-q-2"><div><p>Es una terapia complementaria que utiliza imanes colocados sobre el cuerpo para identificar y equilibrar desajustes. Es no invasiva y se integra con la osteopatía para buscar la causa original del malestar.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-3" id="qa-q-3"><span>¿Qué pasa en mi primera sesión?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-3" role="region" aria-labelledby="qa-q-3"><div><p>Empezamos escuchando tu historia y evaluando tu postura y movilidad. Con esa información identificamos el origen del desequilibrio y aplicamos la terapia más adecuada para ti, explicándote todo antes de comenzar.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-4" id="qa-q-4"><span>¿Las terapias duelen?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-4" role="region" aria-labelledby="qa-q-4"><div><p>Trabajamos con técnicas suaves y personalizadas. Puedes sentir algo de tensión al liberar zonas muy cargadas, pero siempre nos ajustamos a tu comodidad.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-5" id="qa-q-5"><span>¿Cuántas sesiones necesitaré?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-5" role="region" aria-labelledby="qa-q-5"><div><p>Depende de cada persona: tu historia, el tiempo que llevas con la molestia y tus hábitos. Después de la valoración te orientamos con un plan realista.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-6" id="qa-q-6"><span>¿Sustituye a mi tratamiento médico?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-6" role="region" aria-labelledby="qa-q-6"><div><p>No. Son terapias complementarias que no reemplazan el diagnóstico, el tratamiento ni las indicaciones de tu médico. Si tienes una condición diagnosticada, platícanos para trabajar de forma responsable.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-7" id="qa-q-7"><span>¿Qué es Alphabiotismo y cuánto cuesta el curso?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-7" role="region" aria-labelledby="qa-q-7"><div><p>Es nuestro curso práctico y teórico. Incluye prácticas en clínica sin límite de tiempo y constancia avalada por SEP y STPS. Se imparte en Naucalpan y en Oaxaca (Centro) con una inversión de $11,770 MXN.</p></div></div>
+            </div>
+            <div class="qa" data-reveal="up">
+                <h3><button class="qa__q" aria-expanded="false" aria-controls="qa-8" id="qa-q-8"><span>¿Cómo agendo mi cita?</span><i class="qa__i" aria-hidden="true"></i></button></h3>
+                <div class="qa__a" id="qa-8" role="region" aria-labelledby="qa-q-8"><div><p>Escríbenos por WhatsApp al 55 4485 1260 o llena el formulario de contacto. Te respondemos para coordinar tu valoración.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CTA FINAL + CONTACTO
+════════════════════════════════════════════════ -->
+<section id="contacto" class="section section--final" aria-labelledby="contacto-title">
+    <div class="final-rings" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="dark-glow dark-glow--e" aria-hidden="true"></div>
+    <div class="container">
+        <div class="final-cta">
+            <p class="kicker kicker--light" data-reveal="up"><span>08</span> Es tu momento</p>
+            <h2 id="contacto-title" class="title title--light title--xl" data-split>Tu equilibrio empieza <em>con un mensaje.</em></h2>
+            <p class="lead lead--light" data-reveal="up" style="--d:.15s">Cuéntanos qué sientes. Te orientamos, resolvemos tus dudas y agendamos tu valoración para empezar a recuperar tu bienestar.</p>
+            <div class="final-cta__btns" data-reveal="up" style="--d:.25s">
+                <a href="https://wa.me/525544851260" data-wa="Hola, sí quiero empezar. ¿Cuándo puedo agendar mi valoración?" target="_blank" rel="noopener" class="btn btn--accent btn--xl magnetic">
+                    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                    <span>Sí, quiero empezar hoy</span>
+                    <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+                <a href="tel:+525544851260" class="btn btn--ghost btn--xl magnetic">
+                    <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+                    <span>55 4485 1260</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="contact__info" data-reveal="up">
+                <h3>Hablemos</h3>
+                <ul class="clist">
+                    <li>
+                        <span class="clist__ico"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                        <div><strong>WhatsApp y teléfono</strong><a href="tel:+525544851260">55 4485 1260</a></div>
+                    </li>
+                    <li>
+                        <span class="clist__ico"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></span>
+                        <div><strong>Facebook</strong><a href="https://www.facebook.com/share/1C4M2Y8u8S/" target="_blank" rel="noopener">Centro Terapéutico A&amp;B</a></div>
+                    </li>
+                    <li>
+                        <span class="clist__ico"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                        <div><strong>Ubicación</strong><span>Estado de México · Cursos en Naucalpan y Oaxaca Centro</span><small>La dirección exacta te la compartimos al agendar.</small></div>
+                    </li>
+                    <li>
+                        <span class="clist__ico"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                        <div><strong>Atención</strong><span>Con cita previa</span><small>Escríbenos y coordinamos tu horario.</small></div>
+                    </li>
+                </ul>
+                <div class="map">
+                    <iframe title="Mapa de Naucalpan, Estado de México" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Naucalpan%20de%20Ju%C3%A1rez%2C%20Estado%20de%20M%C3%A9xico&amp;output=embed"></iframe>
+                </div>
+            </div>
+
+            <div class="contact__form" data-reveal="up" style="--d:.15s">
+                <form id="wa-form" novalidate>
+                    <h3>Agenda tu valoración</h3>
+                    <p class="form__sub">Déjanos tus datos y continúa por WhatsApp con un mensaje listo.</p>
+                    <div class="field">
+                        <input type="text" id="f-name" name="name" placeholder=" " autocomplete="name" required>
+                        <label for="f-name">Tu nombre</label>
+                        <span class="field__err" role="alert"></span>
+                    </div>
+                    <div class="field">
+                        <input type="tel" id="f-phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel">
+                        <label for="f-phone">Tu teléfono (opcional)</label>
+                    </div>
+                    <div class="field field--select">
+                        <select id="f-interest" name="interest" required>
+                            <option value="" disabled selected></option>
+                            <option>Osteopatía</option>
+                            <option>Biomagnetismo</option>
+                            <option>Osteopatía y biomagnetismo</option>
+                            <option>Curso Alphabiotismo · Naucalpan</option>
+                            <option>Curso Alphabiotismo · Oaxaca Centro</option>
+                            <option>Otro</option>
+                        </select>
+                        <label for="f-interest">¿Qué te interesa?</label>
+                        <span class="field__err" role="alert"></span>
+                    </div>
+                    <div class="field">
+                        <textarea id="f-msg" name="message" rows="3" placeholder=" "></textarea>
+                        <label for="f-msg">Cuéntanos cómo te sientes (opcional)</label>
+                    </div>
+                    <button type="submit" class="btn btn--accent btn--lg btn--block magnetic" id="f-submit">
+                        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+                        <span>Quiero agendar mi valoración</span>
+                    </button>
+                    <p class="form__note">Se abrirá WhatsApp con tu mensaje. No guardamos tus datos.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <img src="img/logo-light.png" alt="Centro Terapéutico A&amp;B — Osteopatía y Biomagnetismo" width="449" height="418" loading="lazy">
+                <p>Osteopatía y biomagnetismo para encontrar la causa original de tu desequilibrio y fomentar la autocuración de tu cuerpo.</p>
+            </div>
+            <nav class="footer__col" aria-label="Secciones">
+                <h4>Explora</h4>
+                <a href="#tratamos">Qué tratamos</a>
+                <a href="#terapias">Terapias</a>
+                <a href="#metodo">Método</a>
+                <a href="#formacion">Formación</a>
+                <a href="#preguntas">Preguntas</a>
+            </nav>
+            <div class="footer__col">
+                <h4>Contacto</h4>
+                <a href="https://wa.me/525544851260" data-wa="Hola, me gustaría recibir más información." target="_blank" rel="noopener">WhatsApp</a>
+                <a href="tel:+525544851260">55 4485 1260</a>
+                <a href="https://www.facebook.com/share/1C4M2Y8u8S/" target="_blank" rel="noopener">Facebook</a>
+                <span>Estado de México</span>
+            </div>
+        </div>
+        <p class="footer__disclaimer">La osteopatía y el biomagnetismo son terapias complementarias y no sustituyen el diagnóstico, tratamiento ni las indicaciones de un médico. Los resultados varían en cada persona.</p>
+        <div class="footer__bottom">
+            <p>© <span id="year">2026</span> Centro Terapéutico A&amp;B. Todos los derechos reservados.</p>
+            <a href="#inicio" class="to-top">Volver arriba <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+    </div>
+</footer>
+
+<!-- ═══════ WHATSAPP FLOTANTE ═══════ -->
+<div class="wa-float" id="wa-float">
+    <span class="wa-float__tip" id="wa-tip">¿Te ayudamos? Escríbenos</span>
+    <a href="https://wa.me/525544851260" data-wa="Hola, me gustaría recibir más información." target="_blank" rel="noopener" class="wa-float__btn" aria-label="Escribir por WhatsApp">
+        <span class="wa-float__pulse" aria-hidden="true"></span>
+        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+    </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
